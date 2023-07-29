@@ -2,6 +2,10 @@ from axisrules.rules import ScoringRule
 from axisrules.misc import find_min, find_max
 
 class VoterDeletionCircular(ScoringRule):
+    """
+    The Voter Deletion Circular rule compute the cycle which minimize the total number of voter 
+    to delete for the profile to be linear.
+    """
 
     name = "Voter Deletion Circular"
     circular = True

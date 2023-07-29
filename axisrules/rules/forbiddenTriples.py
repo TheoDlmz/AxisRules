@@ -12,9 +12,12 @@ class ForbiddenTriples(ScoringRule):
         min_v = find_min(axis, votes)
         max_v = find_max(axis, votes)
         count_before = 0
+        score = 0
         for i in range(min_v, max_v):
             if not votes[axis[i]]:
-                return count_before*(n_app-count_before)
+                score += count_before*(n_app-count_before)
             else:
                 count_before += 1
+
+        return score
     

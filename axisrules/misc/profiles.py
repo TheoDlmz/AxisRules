@@ -1,19 +1,26 @@
 import numpy as np
 
-def compute_weighted_matrix(matrix, n_candidates):
+def compute_weighted_matrix(matrix, n_candidates, weights=None):
     # We read the matrix of votes
     matrix_n = []
     matrix_dict = {}
-    for  ballot in matrix:
+    for i, ballot in enumerate(matrix):
+        w = 1
+        if weights is not None:
+            w = weights[i]
+
+            if w == 0:
+                continue
+
         if ballot.sum() <= 1 or ballot.sum() >= n_candidates:
             continue
         strballot = "".join([str(x) for x in ballot])
         if strballot not in matrix_dict:
             matrix_dict[strballot] = len(matrix_n)
-            x = np.concatenate([ballot,[np.sum(ballot),1]])
+            x = np.concatenate([ballot,[np.sum(ballot),w]])
             matrix_n.append(x)
         else:
-            matrix_n[matrix_dict[strballot]][-1] += 1
+            matrix_n[matrix_dict[strballot]][-1] += w
 
     matrix_n = np.array(matrix_n)[np.argsort([matrix_n[i][-1] for i in range(len(matrix_n))])[::-1],:]
     return matrix_n

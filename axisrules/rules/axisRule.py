@@ -21,8 +21,13 @@ class AxisRule(object):
     def _get_score(self, axis, matrix, current_min):
         raise NotImplementedError
     
-    def get_score(self, axis, matrix):
+    def get_score(self, axis):
+        votes = self.profile
+        weights = self.weights
+        _, n_candidates = np.array(votes).shape
+        matrix = compute_weighted_matrix(votes, n_candidates, weights)
         return self._get_score(axis, matrix, None)[0]
+    
 
     def bruteforce(self):
         votes = self.profile
