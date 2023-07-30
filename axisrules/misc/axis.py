@@ -31,12 +31,12 @@ Useful functions to compute the candidates approved that are the closest to the 
 
 def find_min(axis, ballots):
     for i in range(len(axis)):
-        if ballots[axis[i]]:
+        if ballots[axis[i]] == 1:
             return i
     return -1
 
 def find_max(axis, ballots):
     for i in range(len(axis)):
-        if ballots[axis[len(axis)-1-i]]:
+        if ballots[axis[len(axis)-1-i]] == 1:
             return len(axis)-1-i
     return -1

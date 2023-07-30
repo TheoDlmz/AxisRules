@@ -14,11 +14,20 @@ class BallotCompletionCircular(ScoringRule):
         n_cand = len(axis)
         min_v = find_min(axis, votes)
         max_v = find_max(axis, votes)
-        min_fill = (max_v-min_v+1-n_app)
-        for i in range(min_v+1, max_v+1):
-            if votes[axis[i]]:
-                max_v = min_v
-                min_v = i
-                min_fill = min(min_fill, (max_v+n_cand-min_v+1-n_app))
+        if not self.abstention:
+            min_fill = (max_v-min_v+1-n_app)
+            for i in range(min_v+1, max_v+1):
+                if votes[axis[i]]:
+                    max_v = min_v
+                    min_v = i
+                    min_fill = min(min_fill, (max_v+n_cand-min_v+1-n_app))
+        else:
+            min_fill = len([x for x in range(min_v+1, max_v) if votes[axis[x]] == -1])
+            for i in range(min_v+1, max_v+1):
+                if votes[axis[i]] == 1:
+                    max_v = min_v
+                    min_v = i
+                    curr_fill = len([x for x in range(max_v) if votes[axis[x]] == -1]) + len([x for x in range(min_v+1, n_cand) if votes[axis[x]] == -1])
+                    min_fill = min(min_fill, curr_fill)
         return min_fill
-    
+ 

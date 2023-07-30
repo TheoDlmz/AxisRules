@@ -9,10 +9,10 @@ class AxisRule(object):
     name = None
     circular = False
 
-    def __init__(self, profile, weights=None):
+    def __init__(self, profile, weights=None, abstention=False):
         self.profile = np.array(profile)
         self.weights = weights
-
+        self.abstention = abstention
 
     def set_profile(self, profile, weights=None):
         self.profile = np.array(profile)

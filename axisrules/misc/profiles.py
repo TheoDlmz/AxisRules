@@ -12,12 +12,13 @@ def compute_weighted_matrix(matrix, n_candidates, weights=None):
             if w == 0:
                 continue
 
-        if ballot.sum() <= 1 or ballot.sum() >= n_candidates:
+        ballot_without_abst = np.maximum(0, ballot)
+        if ballot_without_abst.sum() <= 1 or ballot_without_abst.sum() >= n_candidates:
             continue
         strballot = "".join([str(x) for x in ballot])
         if strballot not in matrix_dict:
             matrix_dict[strballot] = len(matrix_n)
-            x = np.concatenate([ballot,[np.sum(ballot),w]])
+            x = np.concatenate([ballot,[np.sum(ballot_without_abst),w]])
             matrix_n.append(x)
         else:
             matrix_n[matrix_dict[strballot]][-1] += w
@@ -32,12 +33,13 @@ def reduce_weighted_matrix(matrix, remove=2):
     n_candidates = len(matrix[1])-2
     for elem in matrix:
         ballot = elem[:-2-remove]
-        if ballot.sum() <= 1 or ballot.sum() >= n_candidates-2:
+        ballot_without_abst = np.maximum(0, ballot)
+        if ballot_without_abst.sum() <= 1 or ballot_without_abst.sum() >= n_candidates-2:
             continue
         strballot = "".join([str(x) for x in ballot])
         if strballot not in matrix_dict:
             matrix_dict[strballot] = len(matrix_n)
-            x = np.concatenate([ballot,[np.sum(ballot),elem[-1]]])
+            x = np.concatenate([ballot,[np.sum(ballot_without_abst),elem[-1]]])
             matrix_n.append(x)
         else:
             matrix_n[matrix_dict[strballot]][-1] += elem[-1]

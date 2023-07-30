@@ -15,7 +15,7 @@ class MinimalSwaps(ScoringRule):
         count_before = 0
         score = 0
         for i in range(min_v, max_v):
-            if not votes[axis[i]]:
+            if (not votes[axis[i]] and not self.abstention) or (votes[axis[i]] == -1 and self.abstention):
                 score+= min(count_before, n_app-count_before)
             else:
                 count_before += 1

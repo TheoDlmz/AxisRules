@@ -14,7 +14,10 @@ class BallotCompletion(ScoringRule):
     def get_ballot_score(self, axis, votes, n_app):
         min_v = find_min(axis, votes)
         max_v = find_max(axis, votes)
-        return max_v-min_v+1-n_app
+        if not self.abstention:
+            return max_v-min_v+1-n_app
+        else:
+            return len([x for x in range(min_v+1, max_v) if votes[axis[x]] == -1])
     
     def _lp_solve(self, model, matrix, vars, n_candidates):
         # We compute the positions

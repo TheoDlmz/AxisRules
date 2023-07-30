@@ -14,9 +14,15 @@ class VoterDeletion(ScoringRule):
     def get_ballot_score(self, axis, votes, n_app):
         min_v = find_min(axis, votes)
         max_v = find_max(axis, votes)
-        if (max_v-min_v+1-n_app) > 0:
-            return 1
-        return 0
+        if not self.abstention:
+            if (max_v-min_v+1-n_app) > 0:
+                return 1
+            return 0
+        else:
+            for i in range(min_v+1, max_v):
+                if votes[axis[i]] == -1:
+                    return 1
+            return 0
     
     def _lp_solve(self, model, matrix, vars, n_candidates):
         tab_scores = []
