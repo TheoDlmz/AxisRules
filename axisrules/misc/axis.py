@@ -1,3 +1,5 @@
+import numpy as np
+
 def print_axis(arr, candidates):
     """
     Print an axis
@@ -17,12 +19,20 @@ def kandallTau(ranking_1, ranking_2):
     Compute the Kandall Tau distance between two rankings
     """
     n_candidates = len(ranking_1)
+    ranks1 = np.argsort(ranking_1)
+    ranks2 = np.argsort(ranking_2)
     count = 0
     for i in range(n_candidates):
         for j in range(i+1, n_candidates):
-            if (ranking_1[i] - ranking_1[j])*(ranking_2[i] - ranking_2[j]) < 0:
+            if (ranks1[i] - ranks1[j])*(ranks2[i] - ranks2[j]) < 0:
                 count += 1
-    return count
+    ranks2 = np.argsort(ranking_2[::-1])
+    count_2 = 0
+    for i in range(n_candidates):
+        for j in range(i+1, n_candidates):
+            if (ranks1[i] - ranks1[j])*(ranks2[i] - ranks2[j]) < 0:
+                count_2 += 1
+    return min(count, count_2)
 
 
 """

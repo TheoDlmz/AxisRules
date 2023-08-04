@@ -36,6 +36,8 @@ class AxisRule(object):
         _, n_candidates = np.array(votes).shape
 
         matrix = compute_weighted_matrix(votes, n_candidates, weights)
+        if len(matrix) == 0:
+            return [([i for i in range(n_candidates)], 0)]
         matrix_reduced = reduce_weighted_matrix(matrix, remove=2)
         # compute_weighted_matrix(votes[:,:-2], n_candidates-2, weights)
 

@@ -23,14 +23,15 @@ def compute_weighted_matrix(matrix, n_candidates, weights=None):
         else:
             matrix_n[matrix_dict[strballot]][-1] += w
 
-    matrix_n = np.array(matrix_n)[np.argsort([matrix_n[i][-1] for i in range(len(matrix_n))])[::-1],:]
+    if len(matrix_n) > 0:
+        matrix_n = np.array(matrix_n)[np.argsort([matrix_n[i][-1] for i in range(len(matrix_n))])[::-1],:]
     return matrix_n
 
 def reduce_weighted_matrix(matrix, remove=2):
     # We read the matrix of votes
     matrix_n = []
     matrix_dict = {}
-    n_candidates = len(matrix[1])-2
+    n_candidates = len(matrix[0])-2
     for elem in matrix:
         ballot = elem[:-2-remove]
         ballot_without_abst = np.maximum(0, ballot)
@@ -44,7 +45,8 @@ def reduce_weighted_matrix(matrix, remove=2):
         else:
             matrix_n[matrix_dict[strballot]][-1] += elem[-1]
 
-    matrix_n = np.array(matrix_n)[np.argsort([matrix_n[i][-1] for i in range(len(matrix_n))])[::-1],:]
+    if len(matrix_n) > 0:
+        matrix_n = np.array(matrix_n)[np.argsort([matrix_n[i][-1] for i in range(len(matrix_n))])[::-1],:]
     return matrix_n
 
 
