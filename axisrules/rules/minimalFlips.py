@@ -25,4 +25,4 @@ class MinimalFlips(ScoringRule):
                 # flips 1->0 before, flips 1->0 after, flips 0->1 in between
                 if x < min_val:
                     min_val = x
-            return min_val
+        return min_val

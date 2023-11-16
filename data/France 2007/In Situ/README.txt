@@ -1,0 +1,1 @@
+BAUJARD Antoinette, IGERSHEIM Herrade, « Expérimentation du vote par note et du vote par approbation le 22 avril 2007. Premiers résultats », Revue économique, 2009/1 (Vol. 60), p. 189-201. DOI : 10.3917/reco.601.0189. URL : https://www.cairn.info/revue-economique-2009-1-page-189.htm
