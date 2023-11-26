@@ -1,4 +1,4 @@
-,candidate,party,party_short,color,score
+id,name,party,party_short,color,score
 0,Nathalie Arthaud,Lutte Ouvrière,LO,#AA0000,0.64
 1,François Asselineau,Union Populaire Républicaine,UPR,#9ad6af,0.92
 2,Jacques Cheminade,Solidarité et Progrès,SP,#e0dcad,0.18

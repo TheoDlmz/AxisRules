@@ -1,0 +1,56 @@
+dataset,year,file,rule,axis,score,n_voters,active_voters,n_candidates
+Gy-Les-Nonains,France 2002,approval.csv,Voter Deletion,Jean-Pierre Chevènement < François Bayrou < Jacques Chirac < Jean-Marie Le Pen < Arlette Laguiller < Lionel Jospin < Noël Mamère,95.0,365,228,7
+Gy-Les-Nonains,France 2002,approval.csv,Minimal Flips,Jean-Pierre Chevènement < François Bayrou < Jacques Chirac < Jean-Marie Le Pen < Arlette Laguiller < Lionel Jospin < Noël Mamère,103.0,365,228,7
+Gy-Les-Nonains,France 2002,approval.csv,Ballot Completion,Jean-Pierre Chevènement < François Bayrou < Jacques Chirac < Jean-Marie Le Pen < Arlette Laguiller < Lionel Jospin < Noël Mamère,184.0,365,228,7
+Gy-Les-Nonains,France 2002,approval.csv,Minimal Swaps,Jean-Pierre Chevènement < François Bayrou < Jacques Chirac < Jean-Marie Le Pen < Arlette Laguiller < Lionel Jospin < Noël Mamère,193.0,365,228,7
+Gy-Les-Nonains,France 2002,approval.csv,Forbidden Triples,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Arlette Laguiller < Lionel Jospin < Noël Mamère,313.0,365,228,7
+IEP Paris,France 2002,approval.csv,Voter Deletion,Jean-Marie Le Pen < François Bayrou < Jacques Chirac < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,99.0,408,276,7
+IEP Paris,France 2002,approval.csv,Minimal Flips,Jean-Marie Le Pen < François Bayrou < Jacques Chirac < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,103.0,408,276,7
+IEP Paris,France 2002,approval.csv,Ballot Completion,Jean-Marie Le Pen < François Bayrou < Jacques Chirac < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,133.0,408,276,7
+IEP Paris,France 2002,approval.csv,Minimal Swaps,Jean-Marie Le Pen < François Bayrou < Jacques Chirac < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,137.0,408,276,7
+IEP Paris,France 2002,approval.csv,Forbidden Triples,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,232.0,408,276,7
+Orsay,France 2002,approval.csv,Voter Deletion,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,561.0,2220,1581,7
+Orsay,France 2002,approval.csv,Minimal Flips,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,599.0,2220,1581,7
+Orsay,France 2002,approval.csv,Ballot Completion,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,879.0,2220,1581,7
+Orsay,France 2002,approval.csv,Minimal Swaps,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,910.0,2220,1581,7
+Orsay,France 2002,approval.csv,Forbidden Triples,Jean-Marie Le Pen < Jacques Chirac < François Bayrou < Jean-Pierre Chevènement < Lionel Jospin < Noël Mamère < Arlette Laguiller,1437.0,2220,1581,7
+In Situ,France 2007,approval.csv,Voter Deletion,Philippe de Villiers < Jean-Marie Le Pen < Nicolas Sarkozy < François Bayrou < Ségolène Royal < Olivier Besancenot < Marie-George Buffet,457.0,2836,1711,7
+In Situ,France 2007,approval.csv,Minimal Flips,Philippe de Villiers < Jean-Marie Le Pen < Nicolas Sarkozy < François Bayrou < Ségolène Royal < Olivier Besancenot < Marie-George Buffet,482.0,2836,1711,7
+In Situ,France 2007,approval.csv,Ballot Completion,Philippe de Villiers < Jean-Marie Le Pen < Nicolas Sarkozy < François Bayrou < Ségolène Royal < Olivier Besancenot < Marie-George Buffet,622.0,2836,1711,7
+In Situ,France 2007,approval.csv,Minimal Swaps,Philippe de Villiers < Jean-Marie Le Pen < Nicolas Sarkozy < François Bayrou < Ségolène Royal < Olivier Besancenot < Marie-George Buffet,633.0,2836,1711,7
+In Situ,France 2007,approval.csv,Forbidden Triples,Philippe de Villiers < Jean-Marie Le Pen < Nicolas Sarkozy < François Bayrou < Ségolène Royal < Olivier Besancenot < Marie-George Buffet,932.0,2836,1711,7
+Crolles,France 2017,approval.csv,Voter Deletion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,343.0,1321,1023,7
+Crolles,France 2017,approval.csv,Minimal Flips,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,390.0,1321,1023,7
+Crolles,France 2017,approval.csv,Ballot Completion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,533.0,1321,1023,7
+Crolles,France 2017,approval.csv,Minimal Swaps,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,553.0,1321,1023,7
+Crolles,France 2017,approval.csv,Forbidden Triples,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,1012.0,1321,1023,7
+Crolles,France 2017,approval_with_runoff_1.csv,Voter Deletion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,334.0,1296,1078,7
+Crolles,France 2017,approval_with_runoff_1.csv,Minimal Flips,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,376.0,1296,1078,7
+Crolles,France 2017,approval_with_runoff_1.csv,Ballot Completion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,569.0,1296,1078,7
+Crolles,France 2017,approval_with_runoff_1.csv,Minimal Swaps,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,587.0,1296,1078,7
+Crolles,France 2017,approval_with_runoff_1.csv,Forbidden Triples,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,1050.0,1296,1078,7
+Grenoble,France 2017,approval.csv,Voter Deletion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,140.0,1069,810,7
+Grenoble,France 2017,approval.csv,Minimal Flips,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,152.0,1069,810,7
+Grenoble,France 2017,approval.csv,Ballot Completion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,234.0,1069,810,7
+Grenoble,France 2017,approval.csv,Minimal Swaps,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,247.0,1069,810,7
+Grenoble,France 2017,approval.csv,Forbidden Triples,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,426.0,1069,810,7
+HSC,France 2017,approval.csv,Voter Deletion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,125.0,711,480,7
+HSC,France 2017,approval.csv,Minimal Flips,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,135.0,711,480,7
+HSC,France 2017,approval.csv,Ballot Completion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,227.0,711,480,7
+HSC,France 2017,approval.csv,Minimal Swaps,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,231.0,711,480,7
+HSC,France 2017,approval.csv,Forbidden Triples,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,360.0,711,480,7
+Online,France 2017,approval.csv,Voter Deletion,Marine Le Pen < Nicolas Dupont-Aignan < François Fillon < Emmanuel Macron < Benoît Hamon < Jean-Luc Mélenchon < Jean Lassalle,2504.0,20076,14721,7
+Online,France 2017,approval.csv,Minimal Flips,Marine Le Pen < Nicolas Dupont-Aignan < François Fillon < Emmanuel Macron < Benoît Hamon < Jean-Luc Mélenchon < Jean Lassalle,2740.0,20076,14721,7
+Online,France 2017,approval.csv,Ballot Completion,Marine Le Pen < Nicolas Dupont-Aignan < François Fillon < Emmanuel Macron < Benoît Hamon < Jean-Luc Mélenchon < Jean Lassalle,4346.0,20076,14721,7
+Online,France 2017,approval.csv,Minimal Swaps,Marine Le Pen < Nicolas Dupont-Aignan < François Fillon < Emmanuel Macron < Benoît Hamon < Jean-Luc Mélenchon < Jean Lassalle,4605.0,20076,14721,7
+Online,France 2017,approval.csv,Forbidden Triples,Marine Le Pen < François Fillon < Nicolas Dupont-Aignan < Emmanuel Macron < Benoît Hamon < Jean-Luc Mélenchon < Jean Lassalle,8393.0,20076,14721,7
+Strasbourg,France 2017,approval.csv,Voter Deletion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,187.0,1071,703,7
+Strasbourg,France 2017,approval.csv,Minimal Flips,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,209.0,1071,703,7
+Strasbourg,France 2017,approval.csv,Ballot Completion,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,322.0,1071,703,7
+Strasbourg,France 2017,approval.csv,Minimal Swaps,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,330.0,1071,703,7
+Strasbourg,France 2017,approval.csv,Forbidden Triples,Jean Lassalle < Jean-Luc Mélenchon < Benoît Hamon < Emmanuel Macron < François Fillon < Nicolas Dupont-Aignan < Marine Le Pen,555.0,1071,703,7
+Online,France 2022,approval.csv,Voter Deletion,Valérie Pecresse < Emmanuel Macron < Yannick Jadot < Jean-Luc Mélenchon < Jean Lassalle < Marine Le Pen < Eric Zemmour,108.0,1379,905,7
+Online,France 2022,approval.csv,Minimal Flips,Valérie Pecresse < Emmanuel Macron < Yannick Jadot < Jean-Luc Mélenchon < Jean Lassalle < Marine Le Pen < Eric Zemmour,124.0,1379,905,7
+Online,France 2022,approval.csv,Ballot Completion,Valérie Pecresse < Emmanuel Macron < Yannick Jadot < Jean-Luc Mélenchon < Jean Lassalle < Marine Le Pen < Eric Zemmour,191.0,1379,905,7
+Online,France 2022,approval.csv,Minimal Swaps,Valérie Pecresse < Emmanuel Macron < Yannick Jadot < Jean-Luc Mélenchon < Jean Lassalle < Marine Le Pen < Eric Zemmour,201.0,1379,905,7
+Online,France 2022,approval.csv,Forbidden Triples,Valérie Pecresse < Emmanuel Macron < Yannick Jadot < Jean-Luc Mélenchon < Jean Lassalle < Marine Le Pen < Eric Zemmour,375.0,1379,905,7

@@ -9,3 +9,9 @@ from .ballotCompletionCircular import BallotCompletionCircular
 from .voterDeletionCircular import VoterDeletionCircular
 from .ballotCompletionThreshold import BallotCompletionThreshold
 from .voterDeletionThreshold import VoterDeletionThreshold
+from .sequentialScoringRule import SequentialScoringRule
+from .sequentialVoterDeletion import SequentialVoterDeletion
+from .sequentialBallotCompletion import SequentialBallotCompletion
+from .sequentialMinimalSwaps import SequentialMinimalSwaps
+from .sequentialMinimalFlips import SequentialMinimalFlips
+from .sequentialForbiddenTriples import SequentialForbiddenTriples

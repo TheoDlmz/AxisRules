@@ -13,7 +13,7 @@ class MinimalFlips(ScoringRule):
         list_approved = [i for i in range(len(axis)) if votes[axis[i]]]
         min_val = len(axis)
         for i in range(len(list_approved)-1):
-            for j in range(i+1, len(list_approved)):
+            for j in range(i, len(list_approved)):
                 x = i + (len(list_approved)-j-1) 
                     
                 if not self.abstention:

@@ -13,6 +13,14 @@ def get_axis(arr, candidates):
     return " < ".join([candidates[i] for i in arr])
 
 
+def reverse_axis(axis, candidates):
+    """
+    Return the axis from the string of the axis
+    """
+    list_cand = axis.split(" < ")
+    return [candidates.index(list_cand[i]) for i in range(len(list_cand))]
+
+
 
 def kandallTau(ranking_1, ranking_2):
     """

@@ -1,0 +1,13 @@
+id,name,party,party_short,color,score,score_local,
+0,Olivier Besancenot,Ligue Communiste Révolutionnaire,LCR,#bb0000,4.08,4.05
+1,Marie-George Buffet,Parti Communiste Français,PCF,#dd0000,1.93,0.81
+2,Gérard Schivardi,Parti des Travailleurs,PT,#ee0000,0.34,0.26
+3,François Bayrou,Union pour la Démocratie Française,UDF,#00FFFF,18.57,22.98
+4,José Bové,Divers Gauche,DVG,#ffc0c0,1.32,1.1
+5,Dominique Voynet,Les Verts,LV,#00c000,1.57,2.13
+6,Philippe de Villiers,Mouvement Pour la France,MPF,#8040C0,2.23,1.69
+7,Ségolène Royal,Parti Socialiste,PS,#FF8080,25.87,23.6
+8,Frédéric Nihous,"Chasse, Pêche, Nature et Traditions",CPNT,#557819,1.15,0.64
+9,Jean-Marie Le Pen,Front National,FN,#0D378A,10.44,7.61
+10,Arlette Laguiller,Lutte Ouvrière,LO,#cc0000,1.33,1.01
+11,Nicolas Sarkozy,Union pour un Mouvement Populaire,UMP,#0066cc,31.18,34.11
