@@ -1,0 +1,91 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{sienna1408675}{RGB}{140,86,75}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204
+},
+tick align=outside,
+tick pos=left,
+title={Noise = 0.1},
+x grid style={darkgray176},
+xlabel={Approval radius},
+xmin=0.18, xmax=0.62,
+xtick style={color=black},
+y grid style={darkgray176},
+ylabel={Average Kendall Tau distance},
+ymin=0.444156656746032, ymax=1.45271020833333,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 0.942394047619048
+0.3 0.775284523809524
+0.4 0.842316666666667
+0.5 0.995516666666667
+0.6 1.39187591575092
+};
+\addlegendentry{VD}
+\addplot [semithick, darkorange25512714, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 0.855759523809524
+0.3 0.729255555555555
+0.4 0.733016666666667
+0.5 0.906291666666667
+0.6 1.26299186507937
+};
+\addlegendentry{MF}
+\addplot [semithick, forestgreen4416044, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 0.7826
+0.3 0.6555
+0.4 0.705866666666667
+0.5 0.928495238095238
+0.6 1.40686686507937
+};
+\addlegendentry{BC}
+\addplot [semithick, crimson2143940, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 0.76525
+0.3 0.615333333333333
+0.4 0.626533333333333
+0.5 0.767
+0.6 1.127225
+};
+\addlegendentry{MS}
+\addplot [semithick, mediumpurple148103189, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 0.745416666666667
+0.3 0.6055
+0.4 0.611833333333333
+0.5 0.7405
+0.6 1.02558333333333
+};
+\addlegendentry{FT}
+\addplot [semithick, sienna1408675]
+table {%
+0.2 0.49
+0.3 0.5295
+0.4 0.5165
+0.5 0.547
+0.6 0.519833333333333
+};
+\addlegendentry{FT_rank}
+\end{axis}
+
+\end{tikzpicture}

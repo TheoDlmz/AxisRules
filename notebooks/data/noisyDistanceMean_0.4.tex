@@ -1,0 +1,84 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{sienna1408675}{RGB}{140,86,75}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray204},
+tick align=outside,
+tick pos=left,
+title={Noise = 0.4},
+x grid style={darkgray176},
+xlabel={Approval radius},
+xmin=0.18, xmax=0.62,
+xtick style={color=black},
+y grid style={darkgray176},
+ylabel={Average Kendall Tau distance},
+ymin=2.99155844072594, ymax=5.99327274475525,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 5.85683118548119
+0.3 5.17958964646465
+0.4 4.5515623015873
+0.5 4.28635189255189
+0.6 4.38900528083028
+};
+\addlegendentry{VD}
+\addplot [semithick, darkorange25512714, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 5.68447063492064
+0.3 4.96767579365079
+0.4 4.09504087301587
+0.5 3.71126428571429
+0.6 3.73289206349206
+};
+\addlegendentry{MF}
+\addplot [semithick, forestgreen4416044, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 5.02454722222222
+0.3 4.3005
+0.4 3.74755119047619
+0.5 3.61196666666667
+0.6 3.95501666666667
+};
+\addlegendentry{BC}
+\addplot [semithick, crimson2143940, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 4.98440714285714
+0.3 4.15078571428571
+0.4 3.54246666666667
+0.5 3.34168333333333
+0.6 3.44997619047619
+};
+\addlegendentry{MS}
+\addplot [semithick, mediumpurple148103189, mark=*, mark size=3, mark options={solid}]
+table {%
+0.2 5.0554
+0.3 4.09516666666667
+0.4 3.339
+0.5 3.128
+0.6 3.20508333333333
+};
+\addlegendentry{FT}
+\addplot [semithick, sienna1408675]
+table {%
+0.2 4.03533333333333
+0.3 4.44
+0.4 4.173
+0.5 4.10746666666667
+0.6 4.43016666666667
+};
+\addlegendentry{FT_rank}
+\end{axis}
+
+\end{tikzpicture}

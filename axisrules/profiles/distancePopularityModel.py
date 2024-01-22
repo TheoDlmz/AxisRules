@@ -3,6 +3,8 @@ import numpy as np
 
 class DistancePopularityModel():
 
+    name = "DistancePopularity"
+
     def __init__(self, alpha=1, beta=1):
         self.alpha = alpha
         self.beta = beta

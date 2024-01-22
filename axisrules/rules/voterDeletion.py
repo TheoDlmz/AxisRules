@@ -5,7 +5,7 @@ from gurobipy import GRB
 
 class VoterDeletion(ScoringRule):
     """
-    The Voter Deletion rule compute the axis which minimize the total number of voter 
+    The Voter Deletion rule compute the axis which minimize the total number of voters 
     to delete for the profile to be linear.
     """
 

@@ -54,3 +54,33 @@ def compute_scores(votes, weights=None):
     if weights is None:
         weights = np.ones(len(votes))
     return votes.T.dot(weights)
+
+def print_profile(votes, candidates):
+    dict_votes = {}
+    for vote in votes:
+        current_vote = []
+        for i, x in enumerate(vote):
+            if x == 1:
+                current_vote.append(candidates[i])
+        str_vote = "{"+ ",".join(current_vote) + "}"
+        if str_vote not in dict_votes:
+            dict_votes[str_vote] = 0
+        dict_votes[str_vote] += 1
+    tab_profile = [(k, dict_votes[k]) for k in sorted(dict_votes, key=dict_votes.get, reverse=True)]
+    for k, v in tab_profile:
+        print(k, v)
+
+
+def get_profile(votes, candidates):
+    dict_votes = {}
+    for vote in votes:
+        current_vote = []
+        for i, x in enumerate(vote):
+            if x == 1:
+                current_vote.append(candidates[i])
+        str_vote = "{"+ ",".join(current_vote) + "}"
+        if str_vote not in dict_votes:
+            dict_votes[str_vote] = 0
+        dict_votes[str_vote] += 1
+    tab_profile = [(k, dict_votes[k]) for k in sorted(dict_votes, key=dict_votes.get, reverse=True)]
+    return tab_profile

@@ -2,6 +2,7 @@ from axisrules.rules import AxisRule
 from axisrules.misc import compute_weighted_matrix, reduce_weighted_matrix, init_model
 import itertools
 import numpy as np
+from tqdm import tqdm
 
 class ScoringRule(AxisRule):
     """
