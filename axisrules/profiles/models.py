@@ -1,9 +1,9 @@
 
 import numpy as np
 
-class MaverickModel():
+class MaverickVotersModel():
 
-    name = "Maverick"
+    name = "Maverick Voters"
 
     def __init__(self, p=0.2):
         self.p = p
@@ -27,9 +27,9 @@ class MaverickModel():
         return votes
     
 
-class OmmittedModel():
+class RandomOmissionsModel():
 
-    name = "Omitted"
+    name = "Random Omissions"
 
     def __init__(self, p=0.2):
         self.p = p
@@ -49,9 +49,9 @@ class OmmittedModel():
         return votes
 
 
-class HammingModel():
+class RandomFlipsModel():
 
-    name = "Hamming"
+    name = "Random Flips"
 
     def __init__(self, p=0.2):
         self.p = p
@@ -105,9 +105,9 @@ def mallowsVote(m, insertion_probabilites_list, center):
 
 
 
-class SwapModel():
+class RandomSwapsModel():
 
-    name = "Swap"
+    name = "Random Swaps"
 
     def __init__(self, phi=0.2):
         self.phi = phi

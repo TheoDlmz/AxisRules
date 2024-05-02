@@ -43,7 +43,7 @@ class ScoringRule(AxisRule):
             current_min = score
         
         cand_l = range(n_candidates-2)
-        for x in (list(itertools.permutations(cand_l))):
+        for x in tqdm(list(itertools.permutations(cand_l))):
             # k += 1
             lx = list(x)
             _, ok = self._get_score(lx, matrix_reduced, current_min)
@@ -112,7 +112,7 @@ class ScoringRule(AxisRule):
     def get_ballot_score(self, axis, votes, n_app):
         raise NotImplementedError
 
-    def get_individual_scores(self, axis, matrix):
+    def _get_individual_scores(self, axis, matrix):
         scores_tab = []
         for ballot in matrix:
             n = ballot[-1]
@@ -122,6 +122,14 @@ class ScoringRule(AxisRule):
             scores_tab.extend([score]*n)
         return scores_tab
 
+
+    def get_individual_scores(self, axis):
+        votes = self.profile
+        weights = self.weights
+        _, n_candidates = np.array(votes).shape
+        matrix = compute_weighted_matrix(votes, n_candidates, weights)
+        return self._get_individual_scores(axis, matrix)
+    
     def _get_score(self, axis, matrix, current_min):
         score = 0
         for ball in matrix:

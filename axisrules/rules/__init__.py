@@ -15,3 +15,4 @@ from .sequentialBallotCompletion import SequentialBallotCompletion
 from .sequentialMinimalSwaps import SequentialMinimalSwaps
 from .sequentialMinimalFlips import SequentialMinimalFlips
 from .sequentialForbiddenTriples import SequentialForbiddenTriples
+from .kScoringRule import KScoringRule
