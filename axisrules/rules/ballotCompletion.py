@@ -5,8 +5,7 @@ from gurobipy import GRB
 
 class BallotCompletion(ScoringRule):
     """
-    The Ballot Completion rule compute the axis which minimize the total number of candidates to add to voters' ballots
-    for the profile to be linear.
+    The Ballot Completion rule compute the axis which minimize the total number of candidates to add to voters' ballots for the profile to be consistent with the axis.
     """
 
     name = "Ballot Completion"

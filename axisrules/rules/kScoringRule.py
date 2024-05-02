@@ -5,8 +5,9 @@ import numpy as np
 from tqdm import tqdm
 
 class KScoringRule(AxisRule):
-
-
+    """
+    
+    """
     def __init__(self, k, scoringRule, profile, weights=None, abstention=False):
         self.k = k
         self.scoring_rule= scoringRule(profile, weights, abstention)

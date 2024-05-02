@@ -4,7 +4,7 @@ from axisrules.misc import find_min, find_max
 class BallotCompletionCircular(ScoringRule):
     """
     The Ballot Completion Circular rule compute the cycle which minimize the total number of candidates to add to voters' ballots
-    for the profile to be linear.
+    for the profile to be consistent with the cycle.
     """
 
     name = "Ballot Completion Circular"
