@@ -1,8 +1,11 @@
 from axisrules.rules import AxisRule
-from axisrules.misc import compute_weighted_matrix, reduce_weighted_matrix, init_model
+from axisrules.misc import compute_weighted_matrix, reduce_weighted_matrix, init_model, count_inversions
 import itertools
 import numpy as np
 from tqdm import tqdm
+
+
+
 
 class ScoringRule(AxisRule):
     """
@@ -19,7 +22,7 @@ class ScoringRule(AxisRule):
         return self._get_score(axis, matrix, None)[0]
     
 
-    def bruteforce(self, proxy_axis=None):
+    def bruteforce(self, proxy_axis=None, suborder=None, coeff=0):
         votes = self.profile
         weights = self.weights
         
@@ -38,7 +41,7 @@ class ScoringRule(AxisRule):
         results = []
 
         if proxy_axis is not None:
-            score, ok = self._get_score(proxy_axis,matrix, None)
+            score, ok = self._get_score(proxy_axis,matrix, None, suborder=suborder, coeff=coeff)
             results.append((proxy_axis, score))
             current_min = score
         
@@ -46,7 +49,7 @@ class ScoringRule(AxisRule):
         for x in tqdm(list(itertools.permutations(cand_l))):
             # k += 1
             lx = list(x)
-            _, ok = self._get_score(lx, matrix_reduced, current_min)
+            _, ok = self._get_score(lx, matrix_reduced, current_min, suborder=suborder, coeff=coeff)
             if not ok:
                 continue
 
@@ -61,7 +64,7 @@ class ScoringRule(AxisRule):
                 for i in range(n_candidates-1):
                     for j in range(i,n_candidates-1):
                         axis = lx[:i]+[n_candidates-2]+lx[i:j]+[n_candidates-1]+lx[j:]
-                        score, ok = self._get_score(axis, matrix, current_min)
+                        score, ok = self._get_score(axis, matrix, current_min, suborder=suborder, coeff=coeff)
                         if ok:
                             current_min = score
                             results.append((axis, score))
@@ -130,13 +133,18 @@ class ScoringRule(AxisRule):
         matrix = compute_weighted_matrix(votes, n_candidates, weights)
         return self._get_individual_scores(axis, matrix)
     
-    def _get_score(self, axis, matrix, current_min):
+    def _get_score(self, axis, matrix, current_min, suborder=None, coeff=0):
+
         score = 0
+        penalty_coeff = 0
+        if suborder is not None:
+            penalty_coeff = coeff*count_inversions(axis, suborder)
         for ball in matrix:
             n = ball[-1]
             n_app = ball[-2]
             votes = ball[:-2]
             score += n*self.get_ballot_score(axis, votes, n_app)
+            score += n*penalty_coeff
 
             if current_min is not None and score > current_min:
                 return score, False

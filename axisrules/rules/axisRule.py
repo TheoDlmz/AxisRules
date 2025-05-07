@@ -16,7 +16,5 @@ class AxisRule(object):
         self.profile = np.array(profile)
         self.weights = weights
 
- 
-
     def __str__(self):
         return self.name

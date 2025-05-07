@@ -84,3 +84,26 @@ def get_profile(votes, candidates):
         dict_votes[str_vote] += 1
     tab_profile = [(k, dict_votes[k]) for k in sorted(dict_votes, key=dict_votes.get, reverse=True)]
     return tab_profile
+
+
+
+
+def count_inversions(axis1, axis2):
+    max_val = max(max(axis1), max(axis2))
+    pos1 = np.zeros(max_val+1)
+    pos2 = np.zeros(max_val+1)
+    for i in range(len(axis1)):
+        pos1[axis1[i]] = i+1
+    for i in range(len(axis2)):
+        pos2[axis2[i]] = i+1
+    
+    inc = 0
+    maxv = 0
+    for i in range(max_val+1):
+        for j in range(i+1, max_val+1):
+            if pos1[i]*pos1[j]*pos2[i]*pos2[j] == 0:
+                continue
+            maxv += 1
+            if (pos1[i] - pos1[j])*(pos2[i] - pos2[j]) < 0:
+                inc += 1
+    return min(inc,maxv-inc)
